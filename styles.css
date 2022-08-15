@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    /* background-color: hsl(216, 12%, 8%); */
+}
+
+.main-card {
+    background-color: hsl(213, 19%, 18%);
+    max-width: 480px;
+    max-height: 480px;
+
+    margin: 0 auto;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    border-radius: 27px;
+}
+
+.top-star {
+    background-color: hsl(213, 21%, 22%);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+}
+
+p.desc {
+    font-size: 23px;
+    color: hsl(217, 12%, 63%);
+    line-height: 1.6;
+}
+
+.rating-container {
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    gap: 25px;
+}
+
+input.rating {
+    width: 50px;
+    height: 50px;
+}
+
+.rating {
+    background-color: hsl(213, 21%, 22%);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+    color: hsl(217, 12%, 63%);//hsl(216, 12%, 54%);
+
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rating:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+.main-btn {
+    color: hsl(0, 0%, 100%);
+    margin-top: auto;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    padding: 15px;
+    border: none;
+    background-color: hsl(25, 97%, 53%);
+    border-radius: 50px;
+    
+    font-size: 23px;
+    font-weight: 700;
+    font-family: 'Overpass', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .4ch;
+    cursor: pointer;
+}
+
+.main-btn:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(0, 0%, 100%);
+}
