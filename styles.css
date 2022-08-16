@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    transition: all ease-in-out .3s;
 }
 
 body {
@@ -52,9 +53,9 @@ p.desc {
 
 .rating-container {
     width: 100%;
-    border-radius: 25px;
     display: flex;
     gap: 25px;
+    justify-content: center;
 }
 
 input[type=radio] {
@@ -72,8 +73,8 @@ input[type=radio] {
 
 .rating {
     background-color: hsl(213, 21%, 22%);
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,13 +93,20 @@ input[type=radio] {
     color: hsl(0, 0%, 100%);
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
 .main-btn {
     color: hsl(0, 0%, 100%);
     margin-top: auto;
-
+/* 
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: center; */
     
     padding: 17px;
     border: none;
