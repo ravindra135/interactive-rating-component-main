@@ -1,28 +1,37 @@
-document.getElementById('submit').addEventListener('click', starSubmit);
+const star1Value = document.getElementById('star1');
+const star2Value = document.getElementById('star2');
+const star3Value = document.getElementById('star3');
+const star4Value = document.getElementById('star4');
+const star5Value = document.getElementById('star5');
+let value;
 
-let star1Value = document.getElementById('star1');
-let star2Value = document.getElementById('star2');
-let star3Value = document.getElementById('star3');
-let star4Value = document.getElementById('star4');
-let star5Value = document.getElementById('star5');
+document.getElementById('submit').addEventListener('click', starSubmit);
 
 function starSubmit() {
     if(star1Value.checked) {
-        console.log(star1Value.value);
+        value = star1Value.value;
+        localStorage.setItem("star", value);
     } 
     else if(star2Value.checked) {
-        console.log(star2Value.value);
+        value = star2Value.value;
+        localStorage.setItem("star", value);
     } 
     else if(star3Value.checked) {
-        console.log(star3Value.value);
+        value = star3Value.value;
+        localStorage.setItem("star", value);
     } 
     else if(star4Value.checked) {
-        console.log(star4Value.value);
+        value = star4Value.value;
+        localStorage.setItem("star", value);
     } 
     else if(star5Value.checked) {
-        console.log(star5Value.value);
+        value = star5Value.value;
+        localStorage.setItem("star", value);
     } 
     else {
-        console.log('Unchecked');
+        value = 0;
+        localStorage.setItem("star", value);
     }
 }
+
+
