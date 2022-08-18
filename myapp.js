@@ -10,27 +10,28 @@ document.getElementById('submit').addEventListener('click', starSubmit);
 function starSubmit() {
     if(star1Value.checked) {
         value = star1Value.value;
-        localStorage.setItem("star", value);
+        sessionStorage.setItem("star", value);
     } 
     else if(star2Value.checked) {
         value = star2Value.value;
-        localStorage.setItem("star", value);
+        sessionStorage.setItem("star", value);
     } 
     else if(star3Value.checked) {
         value = star3Value.value;
-        localStorage.setItem("star", value);
+        sessionStorage.setItem("star", value);
     } 
     else if(star4Value.checked) {
         value = star4Value.value;
-        localStorage.setItem("star", value);
+        sessionStorage.setItem("star", value);
     } 
     else if(star5Value.checked) {
         value = star5Value.value;
-        localStorage.setItem("star", value);
+        sessionStorage.setItem("star", value);
     } 
     else {
         value = 0;
-        localStorage.setItem("star", value);
+        // localStorage.setItem("star", value);
+        sessionStorage.setItem("star", value);
     }
 }
 

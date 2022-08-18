@@ -1,94 +1,171 @@
-# Frontend Mentor - Interactive rating component
+# Frontend Mentor - Interactive rating component solution
 
-![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Interactive rating component coding challenge](./images/desktopView.jpeg)
 
-## Welcome! 👋
 
-Thanks for checking out this front-end coding challenge.
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Table of contents
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## The challenge
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-Your challenge is to build out this interactive rating component and get it looking as close to the design as possible.
+## Overview
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+### The challenge
 
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Select and submit a number rating
 - See the "Thank you" card state after submitting a rating
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+1. Desktop View
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+![Desktop View](./images/desktopView.jpeg)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+2. Tablet View
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+![Tablet View](./images/tabletView.png)
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+3. Mobile View
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+![Mobile View](./images/mobileView.png)
 
-## Building your project
+4. After Rating - Thank You State
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+![Thank You State](./images/thankyoustate.jpeg)
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-## Deploying your project
+### Links
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+1. Solution URL : [Github Repo](https://github.com/ravindra135/interactive-rating-component-main)
+2. Live URL     : [Live URL](https://ravindra135.github.io/interactive-rating-component-main/)
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+## My Process
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Built with
 
-## Create a custom `README.md`
+- HTML
+- CSS
+- JS
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+### What I learned
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+In this project you will find two view;
+- index.html
+- feedback.html
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+In, index.html you need submit a rating, which value will be carried forward to feedback page and shown over ther **"Check the Thank you state image above."**
 
-## Submitting your solution
+So, I have used Radio Buttons as '1 - 5' points, the actual radio buttons are hidden and those you see are the labels check css on how to hide radio buttons;
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+```css
+/* Hiding the actuall Radio Input */
+input[type=radio] {
+    display: none;
+}
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+/* When Radio Input is Selected */
+#star1:checked:checked ~ .star1 .rating,
+#star2:checked:checked ~ .star2 .rating,
+#star3:checked:checked ~ .star3 .rating,
+#star4:checked:checked ~ .star4 .rating,
+#star5:checked:checked ~ .star5 .rating {
+    color: hsl(0, 0%, 100%);;
+    background-color: hsl(217, 12%, 63%);
+}
+```
 
-## Sharing your solution
+**NOTE or TIP:** If your Radio Button is Multiselect, but you want one at a time, them simply make all radio button's 'name' attribute same (check the code in index.html).
 
-There are multiple places you can share your solution:
+Now, passing the Radio Button Value to the Next HTML Page. 
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+As, I could have used PHP, or I can do it in the same page. But here, i decided to split two page and pass the value. I have written a JS Code (myapp.js)
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+**In myapp.js**, i declared all the radio button, then implemented a Event Listener on submit button;
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+```js
+document.getElementById('submit').addEventListener('click', starSubmit);
+// starSubmit is the function to be called when submit button is clicked;
+```
 
-## Got feedback for us?
+**In that starSubmit function** : A if-else-if loop, to check which button radio button is checked;
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+```js
+if(star1Value.checked) {
+        value = star1Value.value;
+        sessionStorage.setItem("star", value);
+    } 
+    else if(star2Value.checked) {
+        value = star2Value.value;
+        sessionStorage.setItem("star", value);
+    } 
+    else if(star3Value.checked) {
+        value = star3Value.value;
+        sessionStorage.setItem("star", value);
+    } 
+    else if(star4Value.checked) {
+        value = star4Value.value;
+        sessionStorage.setItem("star", value);
+    } 
+    else if(star5Value.checked) {
+        value = star5Value.value;
+        sessionStorage.setItem("star", value);
+    } 
+    // This is very important, when no radio button is selected, the value is set to 0; otherwise the var value will be undefined, and same will be carried forward;
+    else {
+        value = 0;
+        // localStorage.setItem("star", value);
+        sessionStorage.setItem("star", value);
+    }
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+/*
+What is localStroage ?
 
-**Have fun building!** 🚀
+- The localStorage object allows you to save key/value pairs in the browser.
+
+What is sessionStorage ?
+
+- The sessionStorage object let you store key/value pairs in the browser.
+
+Both of them do same thing, the only difference is, localStorage will store value until your browser data is cleared, whereas sessionStorage stores value for only one Session i.e. data will deleted after session close.
+*/
+```
+
+Now, in Feedback.html
+
+JS
+```js
+// Getting the Value;
+
+let mStarValue = document.getElementById('starResult');
+mStarValue.innerHTML = sessionStorage.getItem('star');
+```
+HTML
+```html
+ <p class="widget-text">You selected <span id="starResult">0</span> out of 5</p>
+```
+
+### Useful resources
+
+- Session Storage : [Learn About It](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp)
+- Local Storage : [Learn About It](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
+
+## Author
+
+- Frontend Mentor - [@ravindra135](https://www.frontendmentor.io/profile/ravindra135)
+- Github - [@ravindra135](https://github.com/ravindra135/)
+- Instagram - [@ravindra_since2k](https://www.instagram.com/ravindra_since2k/)
