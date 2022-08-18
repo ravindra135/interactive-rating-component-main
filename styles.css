@@ -11,7 +11,7 @@ body {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    /* background-color: hsl(216, 12%, 8%); */
+    background-color: hsl(216, 12%, 8%);
 }
 
 .main-card {
@@ -31,13 +31,17 @@ body {
 
 .top-star {
     background-color: hsl(213, 21%, 22%);
-    width: 80px;
+    max-width: 80px;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 50%;
+}
+
+img#starIco {
+    padding: 10px;
+    width: 50%;
 }
 
 h1 {
@@ -58,10 +62,12 @@ p.desc {
     justify-content: center;
 }
 
+/* Hiding the actuall Radio Input */
 input[type=radio] {
     display: none;
 }
 
+/* When Radio Input is Selected */
 #star1:checked:checked ~ .star1 .rating,
 #star2:checked:checked ~ .star2 .rating,
 #star3:checked:checked ~ .star3 .rating,

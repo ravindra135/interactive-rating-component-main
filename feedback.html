@@ -8,8 +8,8 @@
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 35%, 44%); }
@@ -18,12 +18,12 @@
 <body>
     <div class="main-card">
         <div class="thank-you">
-            <img width="250" id="thank-you-image" src="./images/illustration-thank-you.svg" alt="">
+            <img id="thank-you-image" src="./images/illustration-thank-you.svg" alt="">
             <div class="widget">
                 <p class="widget-text">You selected <span id="starResult">0</span> out of 5</p>
             </div>
             <h1 class="thank-you-heading">Thank you!</h1>
-            <p class="desc">We appreciate you taking the time to give a rating. If you ever need more support, 
+            <p id="feedbackDesc" class="desc">We appreciate you taking the time to give a rating. If you ever need more support, 
                 don’t hesitate to get in touch!</p>
         </div>
     </div> 
